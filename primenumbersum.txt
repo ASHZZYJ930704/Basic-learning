@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+    int x;
+    int cnt =0;
+    int m;
+    int n;
+    int t=0;
+    scanf("%d",&m);
+    scanf("%d",&n);
+    m=m-1;
+    for(x=2;cnt<m;x++){
+        int i;
+        int isPrime =1;
+        for(i=2;i<x;i++){
+            if(x%i == 0){
+                isPrime = 0;
+                break;
+            }
+        }
+        if(isPrime == 1){
+            cnt++;
+            t=t+x;   
+        }   
+    }
+    x=2;
+    int y=0;
+    int cnt1=0;
+    for(x=2;cnt1<n;x++){
+        int j;
+        int isPrime =1;
+        for(j=2;j<x;j++){
+            if(x%j == 0){
+                isPrime = 0;
+                break;
+            }
+        }
+        if(isPrime == 1){
+            cnt1++;
+            y=y+x;   
+        }   
+    }
+    int z;
+    z=y-t;
+    printf("%d ",z);
+    return 0;
+}
